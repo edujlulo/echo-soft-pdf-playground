@@ -2,6 +2,7 @@ body {
   font-family: Arial, sans-serif;
   padding: 40px;
   white-space: pre-line;
+  padding-top: 0;
 }
 
 html,
@@ -13,10 +14,34 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  gap: 0;
 }
 
+h2,
+p,
+table {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+/* ============= CLINIC LOGO STYLES ============= */
+.clinic-logo {
+  width: 300px;
+  height: 200px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  margin-top: -50px;
+  margin-bottom: -40px;
+}
+
+/* ============= REPORT TITLE ============= */
 h2 {
   text-align: center;
+  margin: 0;
+  margin-bottom: -30px;
 }
 
 /* ============= PET DETAILS SECTION ============= */
@@ -46,6 +71,36 @@ h2 {
 }
 
 /* =============== FOOTER STYLES ================ */
+
+.footer > div > div:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* 🔥 baja la imagen */
+}
+
+.top-footer-section-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+}
+
+/* PET IMAGE STYLES */
+
+.pet-image {
+  width: 300px;
+  height: 200px;
+  object-fit: contain;
+  align-self: flex-start; /* 🔥 la pega a la izquierda */
+}
+
+.footer-signature-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
 .signature-line {
   width: 45%;
   height: 2px;

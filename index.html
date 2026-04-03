@@ -12,22 +12,25 @@
       <div>
         <!-- CLINIC LOGO -->
         <div>
-          <p>Here will be the clinic logo</p>
+          <!-- <img
+  class="clinic-logo"
+  src="${image || ""}"
+  alt="Clinic logo"
+/> -->
+          <img class="clinic-logo" src="logointegral.jpg" alt="Clinic logo" />
         </div>
-
         <!-- REPORT TITLE -->
         <div>
           <h2>${formConsultation?.report_title ?? ""}</h2>
         </div>
-
         <!-- PET DETAILS -->
         <table class="pet-details">
           <tr>
             <td><strong>Dueño:</strong> ${selectedPet?.owner ?? ""}</td>
             <td><strong>Mascota:</strong> ${selectedPet?.name ?? ""}</td>
             <td>
-              <strong>Fecha:</strong> ${formConsultation?.consultation_date ??
-              ""}
+              <strong>Fecha:</strong> ${ formConsultation?.consultation_date ??
+              "" }
             </td>
           </tr>
 
@@ -51,14 +54,25 @@
 
       <!-- ============== FOOTER ============== -->
       <div class="footer">
-        <div class="footer-signature">
-          <div class="signature-line"></div>
+        <div class="top-footer-section-container">
+          <!-- PET IMAGE -->
+          <div class="pet-image-container">
+            <!-- <img
+  class="pet-image"
+  src="${image || ""}"
+  alt="Pet image"
+/> -->
+            <img class="pet-image" src="bernardo-photo.jpg" alt="Clinic logo" />
+          </div>
 
-          <p>${activeVet?.name ?? ""}</p>
-          <p>${activeVet?.registration_number ?? ""}</p>
-          <p>${activeClinic?.name ?? ""}</p>
+          <!-- SIGNATURE, NAME AND CLINIC NAME -->
+          <div class="footer-signature-container">
+            <div class="signature-line"></div>
+            <p>${activeVet?.name ?? ""}</p>
+            <p>${activeVet?.registration_number ?? ""}</p>
+            <p>${activeClinic?.name ?? ""}</p>
+          </div>
         </div>
-
         <div class="footer-clinic">
           <p>Dirección: ${activeClinic?.address ?? ""}</p>
           <p>Teléfonos: ${activeClinic?.phone ?? ""}</p>
